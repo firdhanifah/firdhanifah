@@ -14,7 +14,7 @@ A collection of data analytics projects, statistical research, and practical ass
 
 An end-to-end business analytics project analyzing order performance, delivery and customer experience, and payment performance.
 
-[View Project](https://firdhanifah.github.io/data-analytics-portfolio/)
+[View Project](https://firdhanifah.github.io/swiftbite-data-analytics-capstone/)
 
 ### 02. YEC Data Analytics
 **Tools:** Excel, Python, Looker Studio
