@@ -1,23 +1,25 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Firdha Hanifah | Portfolio</title>
-  <meta name="description" content="Personal portfolio of Firdha Hanifah Suparlan, Statistics graduate interested in data analysis and statistical research.">
+
+  <meta name="description" content="Personal portfolio of Firdha Hanifah Suparlan">
 
   <style>
     :root {
-      --navy: #244B4E;
-      --blue: #356B70;
-      --sky: #E9EFE2;
-      --ink: #283A35;
-      --muted: #68776B;
-      --line: #D9E2D2;
-      --paper: #FFFFFF;
-      --bg: #F7F8F3;
-      --accent: #81964F;
+      --navy: #193B63;
+      --blue: #356B9C;
+      --mid-blue: #648EB8;
+      --light-blue: #DCEAF7;
+      --pale-blue: #EEF4FA;
+      --ink: #263A50;
+      --muted: #6C7D91;
+      --line: #D9E4EF;
+      --white: #FFFFFF;
+      --bg: #F7F9FC;
     }
 
     * {
@@ -38,8 +40,13 @@
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .wrap {
@@ -47,11 +54,12 @@
       margin: auto;
     }
 
-    /* Navigation */
+    /* NAVIGATION */
 
     nav {
-      padding: 20px 0;
+      background: rgba(255,255,255,0.95);
       border-bottom: 1px solid var(--line);
+      padding: 20px 0;
     }
 
     nav .wrap {
@@ -59,61 +67,89 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 15px;
     }
 
     .logo {
-      color: var(--navy);
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
+      color: var(--navy);
       letter-spacing: 1px;
     }
 
     .nav-links {
       display: flex;
-      gap: 22px;
+      gap: 24px;
       font-size: 13px;
       color: var(--muted);
     }
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: var(--blue);
     }
 
-    /* Hero */
+    /* HERO */
 
     .hero {
-      padding: 100px 0 90px;
+      padding: 85px 0;
+      background: linear-gradient(
+        120deg,
+        #EAF2FA,
+        #F7F9FC 70%
+      );
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr;
+      gap: 55px;
+      align-items: center;
     }
 
     .eyebrow {
-      color: var(--accent);
+      color: var(--blue);
+      text-transform: uppercase;
       font-size: 12px;
       font-weight: bold;
       letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .hero h1 {
-      font-size: clamp(38px, 6vw, 66px);
+      font-size: clamp(36px, 5vw, 60px);
       line-height: 1.15;
-      letter-spacing: -2px;
       color: var(--navy);
-      max-width: 780px;
-      margin-bottom: 22px;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
     }
 
-    .hero .subtitle {
+    .subtitle {
       font-size: 18px;
       color: var(--blue);
       margin-bottom: 18px;
     }
 
-    .hero .description {
+    .description {
       color: var(--muted);
-      max-width: 600px;
-      margin-bottom: 30px;
+      max-width: 570px;
+      margin-bottom: 28px;
+    }
+
+    .profile-frame {
+      background: white;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(25,59,99,0.08);
+      max-width: 330px;
+      margin-left: auto;
+    }
+
+    .profile-frame img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 12px;
     }
 
     .buttons {
@@ -124,9 +160,9 @@
 
     .btn {
       padding: 12px 22px;
-      border: 1px solid var(--navy);
-      border-radius: 6px;
+      border-radius: 7px;
       font-size: 14px;
+      border: 1px solid var(--navy);
       transition: 0.2s;
     }
 
@@ -144,17 +180,17 @@
     }
 
     .btn-outline:hover {
-      background: var(--sky);
+      background: var(--light-blue);
     }
 
-    /* Sections */
+    /* SECTIONS */
 
     section {
       padding: 75px 0;
     }
 
     .soft {
-      background: var(--sky);
+      background: var(--pale-blue);
     }
 
     .section-head {
@@ -168,66 +204,122 @@
     }
 
     .section-head p {
-      color: var(--muted);
       max-width: 650px;
+      color: var(--muted);
     }
 
-    /* About */
+    /* ABOUT */
 
     .about-text {
-      max-width: 760px;
+      max-width: 800px;
       color: var(--muted);
     }
 
-    /* Projects */
+    /* PROJECTS */
 
     .projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+      gap: 25px;
     }
 
     .project-card {
-      background: var(--paper);
+      background: white;
       border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 28px;
-      transition: 0.2s;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: 0.25s;
     }
 
     .project-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(25,59,99,0.08);
+    }
+
+    .project-cover {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      background: var(--light-blue);
+    }
+
+    .project-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .project-card:hover .project-cover img {
+      transform: scale(1.03);
+    }
+
+    .project-cover .cover-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      background: rgba(25,59,99,0.88);
+      color: white;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-top {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 15px;
+    }
+
+    .project-icon {
+      width: 46px;
+      height: 46px;
+      background: var(--pale-blue);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+      flex-shrink: 0;
     }
 
     .project-type {
       font-size: 11px;
+      color: var(--blue);
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--accent);
       font-weight: bold;
-      margin-bottom: 12px;
+      letter-spacing: 1.4px;
     }
 
-    .project-card h3 {
+    .project-content h3 {
       color: var(--navy);
-      font-size: 21px;
-      margin-bottom: 10px;
+      font-size: 22px;
     }
 
-    .project-card p {
+    .project-content > p {
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .project-link {
       color: var(--blue);
-      font-weight: bold;
       font-size: 14px;
+      font-weight: bold;
     }
 
-    /* Skills */
+    .project-link:hover {
+      color: var(--navy);
+    }
+
+    /* SKILLS */
 
     .skill-list {
       display: flex;
@@ -244,49 +336,76 @@
       font-size: 14px;
     }
 
-    /* Contact */
+    /* CONTACT */
 
     .contact-text {
       color: var(--muted);
       margin-bottom: 25px;
     }
 
+    /* FOOTER */
+
     footer {
-      padding: 25px 0;
       border-top: 1px solid var(--line);
+      padding: 25px 0;
       text-align: center;
       font-size: 13px;
       color: var(--muted);
     }
 
-    @media (max-width: 700px) {
+    /* RESPONSIVE */
+
+    @media (max-width: 750px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .profile-frame {
+        margin: 0;
+        max-width: 280px;
+      }
+
       .projects {
         grid-template-columns: 1fr;
       }
 
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
       .hero {
-        padding: 65px 0;
+        padding: 60px 0;
       }
 
       section {
         padding: 55px 0;
       }
+    }
 
-      .nav-links {
-        gap: 12px;
-        flex-wrap: wrap;
+    @media (max-width: 450px) {
+      nav .wrap {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .hero h1 {
         letter-spacing: -1px;
       }
+
+      .project-cover {
+        height: 180px;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
   <!-- NAVIGATION -->
+
   <nav>
     <div class="wrap">
       <a href="#" class="logo">FH.</a>
@@ -300,39 +419,56 @@
     </div>
   </nav>
 
+
   <!-- HERO -->
+
   <header class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Statistics · Data Analysis · Research</p>
+    <div class="wrap hero-content">
 
-      <h1>Firdha Hanifah Suparlan</h1>
+      <div>
+        <p class="eyebrow">
+          Statistics · Data · Research
+        </p>
 
-      <p class="subtitle">
-        Statistics Graduate | Aspiring Data Analyst
-      </p>
+        <h1>Firdha Hanifah Suparlan</h1>
 
-      <p class="description">
-        Interested in data analysis, statistical research, and data visualization.
-        Exploring ways to transform data into meaningful information
-        for better understanding and decision-making.
-      </p>
+        <p class="subtitle">
+          Statistics Graduate | Aspiring Data Analyst
+        </p>
 
-      <div class="buttons">
-        <a href="#projects" class="btn btn-primary">
-          Explore Projects ↓
-        </a>
+        <p class="description">
+          Interested in data analysis, statistical research,
+          and data visualization. Exploring ways to transform
+          data into meaningful information for better understanding
+          and decision-making.
+        </p>
 
-        <a href="https://linkedin.com/in/firdhahanifahs/"
-           target="_blank" class="btn btn-outline">
-          LinkedIn ↗
-        </a>
+        <div class="buttons">
+          <a href="#projects" class="btn btn-primary">
+            Explore Projects ↓
+          </a>
+
+          <a href="https://linkedin.com/in/firdhahanifahs/"
+             target="_blank" class="btn btn-outline">
+            LinkedIn ↗
+          </a>
+        </div>
       </div>
+
+      <div class="profile-frame">
+        <img src="images/profile.jpg"
+             alt="Firdha Hanifah Suparlan">
+      </div>
+
     </div>
   </header>
 
+
   <!-- ABOUT -->
+
   <section id="about" class="soft">
     <div class="wrap">
+
       <div class="section-head">
         <p class="eyebrow">01 / About</p>
         <h2>About Me</h2>
@@ -353,81 +489,171 @@
           can be used to answer questions and support decision-making.
         </p>
       </div>
+
     </div>
   </section>
 
+
   <!-- PROJECTS -->
+
   <section id="projects">
     <div class="wrap">
+
       <div class="section-head">
         <p class="eyebrow">02 / Selected Work</p>
         <h2>Projects</h2>
+
         <p>
-          A collection of research, data analysis, and other projects
-          reflecting my learning and experience.
+          A collection of research, data analysis,
+          and other projects reflecting my learning and experience.
         </p>
       </div>
 
       <div class="projects">
 
-        <!-- PROJECT 1 -->
+
+        <!-- ETNO PROJECT -->
+
         <article class="project-card">
-          <p class="project-type">Statistical Research</p>
 
-          <h3>Etnotherapeutics</h3>
+          <div class="project-cover">
+            <img src="images/etno-cover.jpg"
+                 alt="Etnotherapeutics research cover">
 
-          <p>
-            A collaborative research project exploring the relationship
-            between nurse communication interventions based on
-            Silih Asah and Silih Asih and resilience in lung cancer patients,
-            using Bayesian ordinal logistic regression.
-          </p>
+            <span class="cover-label">
+              STATISTICAL RESEARCH
+            </span>
+          </div>
 
-          <a href="LINK_WEBSITE_ETNO" class="project-link">
-            Explore Research ↗
-          </a>
+          <div class="project-content">
+
+            <div class="project-top">
+              <div class="project-icon">
+                🧬
+              </div>
+
+              <div>
+                <p class="project-type">Research & Statistics</p>
+                <h3>Etnotherapeutics</h3>
+              </div>
+            </div>
+
+            <p>
+              A collaborative research project exploring nurse communication
+              interventions based on Silih Asah and Silih Asih and resilience
+              in lung cancer patients using Bayesian ordinal logistic regression.
+            </p>
+
+            <a href="LINK_WEBSITE_ETNO"
+               class="project-link">
+              Explore Research ↗
+            </a>
+
+          </div>
         </article>
 
-        <!-- PROJECT 2 -->
+
+        <!-- SWIFTBITE PROJECT -->
+
         <article class="project-card">
-          <p class="project-type">Business Analytics</p>
 
-          <h3>SwiftBite</h3>
+          <div class="project-cover">
+            <img src="images/swiftbite-cover.jpg"
+                 alt="SwiftBite business analytics cover">
 
-          <p>
-            An end-to-end business analytics project exploring
-            order performance, delivery experience, customer ratings,
-            and payment performance through data analysis and visualization.
-          </p>
+            <span class="cover-label">
+              BUSINESS ANALYTICS
+            </span>
+          </div>
 
-          <a href="LINK_WEBSITE_SWIFTBITE" class="project-link">
-            Explore Project ↗
-          </a>
+          <div class="project-content">
+
+            <div class="project-top">
+              <div class="project-icon">
+                📊
+              </div>
+
+              <div>
+                <p class="project-type">Data Analysis</p>
+                <h3>SwiftBite</h3>
+              </div>
+            </div>
+
+            <p>
+              An end-to-end business analytics project exploring
+              order performance, delivery experience, customer ratings,
+              and payment performance through data analysis and visualization.
+            </p>
+
+            <a href="LINK_WEBSITE_SWIFTBITE"
+               class="project-link">
+              Explore Project ↗
+            </a>
+
+          </div>
         </article>
 
-        <!-- PROJECT 3 -->
+
+        <!-- FUTURE PROJECT -->
+
         <article class="project-card">
-          <p class="project-type">Data Analysis</p>
 
-          <h3>Other Projects</h3>
+          <div class="project-cover"
+               style="background:linear-gradient(135deg,#DCEAF7,#AFC9E3);">
 
-          <p>
-            Additional data analysis projects involving data processing,
-            exploratory analysis, reporting, and visualization.
-          </p>
+            <div style="
+              height:100%;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              font-size:60px;
+              color:#193B63;
+            ">
+              💻
+            </div>
 
-          <a href="#" class="project-link">
-            Coming Soon
-          </a>
+            <span class="cover-label">
+              OTHER PROJECTS
+            </span>
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-top">
+              <div class="project-icon">
+                💡
+              </div>
+
+              <div>
+                <p class="project-type">Data & Analytics</p>
+                <h3>More Projects</h3>
+              </div>
+            </div>
+
+            <p>
+              Other projects involving data processing,
+              exploratory analysis, reporting, and visualization
+              will be added here.
+            </p>
+
+            <a href="#" class="project-link">
+              Coming Soon
+            </a>
+
+          </div>
         </article>
+
 
       </div>
     </div>
   </section>
 
+
   <!-- SKILLS -->
+
   <section id="skills" class="soft">
     <div class="wrap">
+
       <div class="section-head">
         <p class="eyebrow">03 / Tools & Skills</p>
         <h2>Tools I Work With</h2>
@@ -445,12 +671,16 @@
         <span class="skill">Statistical Analysis</span>
         <span class="skill">Data Visualization</span>
       </div>
+
     </div>
   </section>
 
+
   <!-- CONTACT -->
+
   <section id="contact">
     <div class="wrap">
+
       <div class="section-head">
         <p class="eyebrow">04 / Contact</p>
         <h2>Let's Connect</h2>
@@ -461,6 +691,7 @@
       </p>
 
       <div class="buttons">
+
         <a href="https://linkedin.com/in/firdhahanifahs/"
            target="_blank" class="btn btn-primary">
           LinkedIn ↗
@@ -475,14 +706,18 @@
            class="btn btn-outline">
           Email ↗
         </a>
+
       </div>
+
     </div>
   </section>
 
+
   <!-- FOOTER -->
+
   <footer>
     <div class="wrap">
-      <p>© 2026 Firdha Hanifah Suparlan · Built with HTML & CSS</p>
+      <p>© 2026 Firdha Hanifah Suparlan</p>
     </div>
   </footer>
 
