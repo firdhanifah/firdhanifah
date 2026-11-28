@@ -1,7 +1,7 @@
 
 # Hi, I'm Firdha Hanifah 👋
 
-Statistics graduate with an interest in **Data Analytics, Market Analysis, and Statistical Research**. Interested in working with data through data cleaning, exploratory analysis, statistical methods, and visualization to generate insights that support decision-making.
+Statistics graduate with an interest in **Data Analytics and Statistical Research**. Interested in working with data through data cleaning, exploratory analysis, statistical methods, and visualization to generate insights that support decision-making.
 
 ---
 
@@ -38,18 +38,3 @@ Research on resilience among lung cancer patients, conducted as part of the 2025
 [View Repository](https://github.com/firdhanifah/Program-Kreativitas-Mahasiswa)
 
 ---
-
-## 🛠️ Tools & Technologies
-
-- **Programming:** Python, R, SQL
-- **Data Processing:** Excel, Pandas
-- **Statistical Analysis:** SPSS, Regression Analysis, Exploratory Data Analysis
-- **Data Visualization:** Power BI, Looker Studio, Matplotlib, Seaborn
-
----
-
-## 📫 Connect with Me
-
-- **LinkedIn:** [linkedin.com/in/firdhahanifahs](https://www.linkedin.com/in/firdhahanifahs/)
-- **Portfolio:** [bit.ly/firdha-portfolio](https://bit.ly/firdha-portfolio)
-- **GitHub:** [github.com/firdhanifah](https://github.com/firdhanifah)
